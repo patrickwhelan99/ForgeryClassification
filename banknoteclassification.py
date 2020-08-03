@@ -14,6 +14,9 @@ import matplotlib.pyplot as plt
 
 BATCH_SIZE=128
 
+!wget -O "data_banknote_authentication.txt" https://raw.githubusercontent.com/patrickwhelan99/ForgeryClassification/master/data_banknote_authentication.txt
+!head "data_banknote_authentication.txt"
+
 dataFrame = pd.read_csv("data_banknote_authentication.txt", names=["variance", "skew", "curtosis", "entropy", "classification"])
 
 target = dataFrame.pop('classification')
